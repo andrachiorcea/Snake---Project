@@ -13,8 +13,9 @@ namespace Joc
 		void Fruit::setPosition(int x,int y);
         sf::FloatRect getBounds() ;
 	private:
-		sf::CircleShape fruit;
-        static const float radius;
+		sf::RectangleShape fruit;
+        static const float lat;
+		sf::Texture text;
 	};
 }
 

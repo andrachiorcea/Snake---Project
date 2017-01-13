@@ -4,13 +4,15 @@
 
 using namespace Joc;
 
-const float Fruit::radius = 10.f;
+const float Fruit::lat = 25.f;
 
 
-Fruit::Fruit(){
-fruit.setPosition({ 20, 40 });
-fruit.setRadius(Fruit::radius);
-fruit.setFillColor(sf::Color::Red);
+Fruit::Fruit() {
+	fruit.setPosition({ 20, 40 });
+	fruit.setSize(sf::Vector2f(lat, lat));
+	fruit.setFillColor(sf::Color(255,51,51));
+	text.loadFromFile("apple.jpeg");
+	fruit.setTexture(&text);
 }
 
 void Fruit::setPosition(int x, int y)
