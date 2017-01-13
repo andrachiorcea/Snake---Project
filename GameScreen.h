@@ -6,7 +6,7 @@
 #include "Screen.h"
 #include "Snake.h"
 #include "Fruit.h"
-
+#include"Bub.h"
 
 namespace Joc
 {
@@ -18,11 +18,15 @@ namespace Joc
 		void update(sf::Time delta) override;
 		void Draw(sf::RenderWindow& window) override;
 		void newFruit();
-		void FruitPower();
+		void Berry();
+		void Scorx5();
+		void increaseSpeed();
+		void newBub();
 
 	private:
 		Snake snake;
 		Fruit fruit;
+		Bub bub;
 	};
 }
 

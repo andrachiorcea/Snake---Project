@@ -13,7 +13,7 @@ EndGame::EndGame(int score)
 {
 	font.loadFromFile("font.ttf");
 	text.setFont(font);
-	text.setString("Scor: " + std::to_string(score-1 + (score-1)/10*2 ) + "!"
+	text.setString("Scor: " + std::to_string(score-1 ) + "!"
 		"\n\nApasa S pentru a mai juca o data"
 		"\n\nApasa ESC pentru a parasi jocul");
 	text.setColor(sf::Color(255, 102, 102));

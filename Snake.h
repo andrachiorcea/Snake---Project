@@ -8,6 +8,7 @@
 
 #include "Cell.h"
 #include "Fruit.h"
+#include"Bub.h"
 
 namespace Joc
 {
@@ -22,6 +23,7 @@ namespace Joc
 		void Draw(sf::RenderWindow& window);
 		void grow();
 		bool eats(Fruit fruit);
+		bool eatsp(Bub bub);
 		void move();
 		void hitWall();
 		bool dies();
@@ -29,8 +31,8 @@ namespace Joc
 		bool dead;
 		void ChangeColor();
 		int score();
-		
-
+		bool eatsBub(Bub bub);
+		void Shrink();
 	private:
 	
 		Direction dir;

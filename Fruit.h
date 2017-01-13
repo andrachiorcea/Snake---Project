@@ -10,10 +10,10 @@ namespace Joc
 	public:
 		Fruit();
 		void Draw(sf::RenderWindow& window);
-		void Fruit::setPosition(int x,int y);
+		void setPosition(int x,int y);
         sf::FloatRect getBounds();
-		void setGreen();
-		void setRed();
+		void setBerry();
+		void setApple();
 	private:
 		sf::RectangleShape fruit;
         static const float lat;

@@ -53,6 +53,14 @@ bool Snake::eats(Fruit fruit)
 	}
 }
 
+bool Joc::Snake::eatsp(Bub bub)
+{
+	for (int i = 0; i < cells.size(); i++)
+	{
+		if (cells[i].getBounds().intersects(bub.getBounds())) return true;
+	}
+}
+
 void Snake::grow()
 {
 	switch (dir)
@@ -88,6 +96,14 @@ void Snake::ChangeColor()
 int Snake::score()
 {
 	return cells.size();
+}
+
+bool Joc::Snake::eatsBub(Bub bub)
+{
+	for (int i = 0; i < cells.size(); i++)
+	{
+		if (cells[i].getBounds().intersects(bub.getBounds())) return true;
+	}
 }
 
 bool Snake::dies()
@@ -146,4 +162,9 @@ void Snake::Draw(sf::RenderWindow& window)
 	{
 		cells[i].Draw(window);
 	}
+}
+
+void Snake::Shrink()
+{
+	cells.erase(cells.begin()+cells.size()/2, cells.end());
 }
