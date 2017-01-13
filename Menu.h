@@ -1,5 +1,5 @@
-#ifndef MENU_SCREEN_H
-#define MENU_SCREEN_H
+#ifndef MENU_H
+#define MENU_H
 
 #include <SFML/Graphics.hpp>
 
@@ -11,9 +11,8 @@ namespace Joc
 	{
 	public:
 		Menu();
-
 		void handleInput(sf::RenderWindow& window) override;
-		void update(sf::Time delta) ;
+		void update(sf::Time delta) override;
 		void Draw(sf::RenderWindow& window) override;
 
 	private:

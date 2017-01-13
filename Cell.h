@@ -1,5 +1,5 @@
-#ifndef SNAKE_NODE_H
-#define SNAKE_NODE_H
+#ifndef CELL_H
+#define CELL_H
 
 #include <SFML/Graphics.hpp>
 

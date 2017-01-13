@@ -28,3 +28,17 @@ sf::FloatRect Fruit::getBounds()
 {
 	return fruit.getGlobalBounds();
 }
+
+void Joc::Fruit::setGreen()
+{
+	fruit.setFillColor(sf::Color::Magenta);
+	text.loadFromFile("zmeura.jpg");
+	fruit.setTexture(&text);
+}
+
+void Joc::Fruit::setRed()
+{
+	fruit.setFillColor(sf::Color(255, 51, 51));
+	text.loadFromFile("apple.jpeg");
+	fruit.setTexture(&text);
+}

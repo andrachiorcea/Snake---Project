@@ -106,13 +106,13 @@ bool Snake::dies()
 
 void Snake::hitWall()
 {
-	if (cells[0].getPosition().x <= 0)
+	if (cells[0].getPosition().x < 0)
 		cells[0].setPosition(Game::Width, cells[0].getPosition().y);
-	else if (cells[0].getPosition().x >= Game::Width)
+	else if (cells[0].getPosition().x > Game::Width)
 		cells[0].setPosition(0, cells[0].getPosition().y);
-	else if (cells[0].getPosition().y <= 0)
+	else if (cells[0].getPosition().y < 0)
 		cells[0].setPosition(cells[0].getPosition().x, Game::Height);
-	else if (cells[0].getPosition().y >= Game::Height)
+	else if (cells[0].getPosition().y > Game::Height)
 		cells[0].setPosition(cells[0].getPosition().x, 0);
 }
 
